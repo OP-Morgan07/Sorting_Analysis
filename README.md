@@ -1,60 +1,74 @@
-# Sorting_Analysis
-# Sorting Algorithm Performance Analysis
+# Sorting Algorithm Performance Comparison
 
-## Overview
-This project generates random numbers, writes them to files, reads them back, and analyzes the performance of three sorting algorithms:
+This project generates random numbers, stores them in files, and measures the performance of various sorting algorithms on those numbers. The sorting algorithms implemented include Bubble Sort, Insertion Sort, Selection Sort, Recursive Quick Sort, Iterative Quick Sort, and Heap Sort.
 
+## Features
+- Generates random numbers within a user-defined range.
+- Stores random numbers in multiple files.
+- Reads data from files and applies different sorting algorithms.
+- Measures the execution time for sorting unsorted and sorted arrays.
+- Provides a performance comparison for various sorting techniques.
+
+## Sorting Algorithms Implemented
 1. **Bubble Sort**
 2. **Insertion Sort**
 3. **Selection Sort**
+4. **Recursive Quick Sort**
+5. **Iterative Quick Sort**
+6. **Heap Sort**
 
-## Features
-- User inputs the number of files to generate.
-- Each file contains a user-specified number of random integers.
-- Sorting time for each algorithm is measured in nanoseconds.
-- Results are displayed in the console.
+## How to Compile and Run
 
-## Files
-- `sorting_algorithms.cpp`: The main C++ program containing the sorting algorithms and execution logic.
-- `file1.txt`, `file2.txt`, etc.: Generated data files containing random numbers.
+### Compilation:
+Ensure you have a C++ compiler (e.g., g++) installed, then compile the program using the following command:
 
-## Requirements
-- A C++ compiler (e.g., g++, clang++)
-- Standard C++ libraries
-
-## Compilation
-To compile the code, use the following command:
-```sh
- g++ sorting_algorithms.cpp -o sorting_analysis
+```bash
+ g++ -std=c++17 sorting_algorithms.cpp -o sorting_algorithms
 ```
 
-## Execution
-Run the compiled executable:
-```sh
-./sorting_analysis
+### Running the Program:
+
+```bash
+ ./sorting_algorithms
 ```
 
-Follow the prompts to enter the number of files and the number of random numbers to be generated.
+## Input Format
+The program will prompt the user for the following inputs:
+1. The maximum value in the range of random numbers.
+2. The minimum value in the range of random numbers.
+3. The number of files to generate.
+4. The number of random numbers to store in each file.
 
-## Sorting Algorithms Explanation
-1. **Bubble Sort**: Compares adjacent elements and swaps them if they are in the wrong order. Repeats until sorted.
-2. **Insertion Sort**: Builds the sorted array one element at a time by shifting elements to their correct position.
-3. **Selection Sort**: Finds the minimum element and places it in the sorted position, repeating for each subsequent element.
+## Output
+The program outputs the time taken (in nanoseconds) for each sorting algorithm to process both unsorted and sorted data, including:
 
-## Sample Output
+- Bubble Sort Time For Unsorted/Sorted
+- Insertion Sort Time For Unsorted/Sorted
+- Selection Sort Time For Unsorted/Sorted
+- Recursive Quick Sort Time For Unsorted/Sorted
+- Iterative Quick Sort Time For Unsorted/Sorted
+- Heap Sort Time For Unsorted/Sorted
+
+## File Handling
+- The random numbers are stored in text files named `file1.txt`, `file2.txt`, etc.
+- The numbers in the files are comma-separated.
+- The program reads the files and processes the data for sorting.
+
+## Example Execution
+```shell
+Enter the max of the range of random numbers : 100
+Enter the min of the range of the random numbers : 1
+Enter the number of files: 3
+Enter the amount of random numbers: 10
 ```
-Enter the number of files: 2
-Enter the amount of random numbers: 5
-Bubble Sort Time: file1.txt 5000 ns
-Insertion Sort Time: file1.txt 3000 ns
-Selection Sort Time: file1.txt 4000 ns
-```
 
-## Improvements
-- Add support for more efficient sorting algorithms such as Merge Sort and Quick Sort.
-- Write performance results to a log file.
-- Provide visualization of sorting times.
+## Dependencies
+- Standard C++ libraries: `iostream`, `fstream`, `vector`, `cstdlib`, `ctime`, `chrono`, `sstream`, `stack`
+
+## Notes
+- The sorting algorithms work on arrays of integers.
+- Timing is measured using the C++ `<chrono>` library for high precision.
 
 ## License
-This project is licensed under the MIT License.
+This project is open-source and available for educational purposes.
 
